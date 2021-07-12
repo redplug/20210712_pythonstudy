@@ -318,8 +318,6 @@ alias interface si do show ip int brief
 alias interface de do show interface description
 alias configure si do show ip int brief
 alias configure de do show interface description
-alias exec si show ip int brief
-alias exec de show interface description
 !
 line con 0
  exec-timeout 30 0
