@@ -22,10 +22,7 @@ print('price 삭제후 :',dict_a)
 
 # print('에러 :',dict_a["key"])
 
-## 키가 존재하는지 확인 하고 값에 접근하기 key_in.py
-
-
-
-# 4-3 반복문과 while 반복문
-
-# 4-4 문자열, 리스트, 딧셔너리와 관련된 기본 함수
+# 키가 존재하는지 확인 하고 값에 접근하기 
+# in 키워드 key_in.py
+# get() 함수 get01.py
+# for 반복문: 딕셔너리와 함께 사용하기 for_dict.py

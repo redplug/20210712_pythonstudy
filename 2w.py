@@ -56,11 +56,11 @@
 
 ## 추가 ##
 # quit() -> 프로그램을 종료하는 방법 추가 : exit(), sys.exit(), os.exit()
-# for test in range(10):     
-#     if test == 5: 
-#         print(quit) 
-#         quit()
-#     print(test)
+for test in range(10):     
+    if test == 5: 
+        print(quit) 
+        quit()
+    print(test)
 
 
 ## 배운걸로 간단 게임을 만들어보자
@@ -73,10 +73,11 @@
 # 자료형을 확인하는 방법은 type() 함수를 활용 하는 것. 
 
 ## 자료형 확인 방법
-print("문자 자료형 : ", type("테에에엑스트"))
-print("숫자 자료형 : ", type(12345))
-print("불 자료형 : ", type(True))
-print("불 자료형 : ", type(['1']))
+print("문자 자료형 : ", type("테에에엑스트")) # str
+print("숫자 자료형 : ", type(12345)) # int
+print("불 자료형 : ", type(True)) # True??? bool
+print("불 자료형 : ", type(['1'])) # str
+
 
 ## 문자열 자료형 부터
 ## 문자열 자료형을 만들때는 "" 혹은 ''로 만든다
@@ -90,7 +91,7 @@ print('"큰 따옴표를 넣을 때 " 이렇게 하세요')
 ## 이스케이프 문자 사용방법
 ## 이스케이프는 특수한 문자를 사용할때 사용하는 문자 \
 print('\"큰 따옴표를 넣을 때\" 이렇게 하세요')
-print('줄바꿈\n줄바꿈\n탭탭탭\t 탭탭탭 \\ \\ \\ \\ \\')
+print('줄바꿈\n줄바꿈\n탭탭탭\t탭탭탭 \\ \\ \\ \\ \\')
 
 ## 여러줄을 한번에 넣을 때
 print("""\
@@ -101,6 +102,10 @@ print("""\
 
 ##문자열 연산자
 print("박지환" + "입니다.")
+print("박지환" + "3333")
+print("박지환" + str(3333))
+print("박지환", 3333)
+print("박지환", "3333")
 print("박지환" * 3)
 
 ## 문자열 인덱싱 -> 글자 하나하나 마다 번호를 매겨놓은거라고 보면 됩니다.
@@ -111,19 +116,19 @@ print("박지환"[1])
 print("박지환"[2])
 
 ## -는 거꾸로 시작
-print("박지환"[-1]) 
-print("박지환"[-2])
-print("박지환"[-3])
+print("박지환아라루"[-1]) 
+print("박지환아라루"[-2])
+print("박지환아라루"[-3])
 
 ## 문자열 슬라이싱
-print("박지환입니다\."[0:3])
+print("박지환입니다."[0:3])
 print("박지환입니다."[1:4])
-#print("박지환입니다."[10])
+print("박지환입니다."[10])
 print("박지환입니다."[1:10])
 
 ## 문자열 길이 구하기
 print(len("박지환입니다요오오오오오"))
-#print(len(1234567890))
+print(len(str(1234567890)))
 
 ## 연습문제 2-1 ##
 print("# 연습 문제")
@@ -141,20 +146,23 @@ print("안녕하세요"[2:4])
 print("안녕하세요"[1:])
 print("안녕하세요"[:3])
 
+
+
 ## 숫자 자료형 ##
-print(123)
-print(123.123123)
+print(123) # 정수
+print(123.123123) # 실수
 
 print(type(123)) ## 정수
 print(type(123.123123)) ## 실수
 
 ## 숫자 연산자
-print("5 + 7 =", 5 + 7)
-print("5 - 7 =", 5 - 7)
-print("5 * 7 =", 5 * 7)
-print("10 / 7 =", 5 / 7)
-print("10 // 7 =", 10 // 7)
-print("2 ** 1 =", 2 ** 1)
+print("5 + 7 =", 5 + 7) # 더하기
+print("5 - 7 =", 5 - 7) # 빼기
+print("5 * 7 =", 5 * 7) #곱하기
+print("10 / 7 =", 5 / 7)  #나누기
+print("10 // 7 =", 10 // 7) # 몫
+print("10 % 7 =", 10 % 7) # 나머지
+print("2 ** 1 =", 2 ** 1) # 제곱
 print("2 ** 2 =", 2 ** 2)
 print("2 ** 3 =", 2 ** 3)
 print("2 ** 4 =", 2 ** 4)
@@ -181,16 +189,32 @@ print("- 나머지 :",3462 % 17)
 print(2 + 2 - 2 * 2 / 2 * 2)
 print(2 - 2 + 2 / 2 * 2 + 2)
 
+
+
+
+
+
 ## 변수와 입력
-## 변수란? 값을 넣는 박스, 변수> 변하는 값
+## 변수란? 값을 넣는 박스, 변수> 변하는 값 반대??? -> 상수
 ## 사용볍 : 변수를 선언 > 값을 넣고 > 참조
 pi = 3.1459265
 print(pi)
+print(type(pi))
+
+pi = 3
+print(pi)
+print(type(pi))
+
+pi = "3.1459265"
+print(pi)
+print(type(pi))
 
 ## 복합 대입 연산자
 number = 100
 print("number ", number)
 number += 10
+print("number ", number)
+number = 10 + number
 print("number ", number)
 ## number += 10 > number = number + 10 과 같다.
 
@@ -200,8 +224,8 @@ print("string ", string)
 string += "!!!"
 print("string ", string)
 ## 반대로 쓰면???
-# string =+ "!!!"
-# print("string ", string)
+string =+ "!!!"
+print("string ", string)
 
 ## 사용자 입력받기 input
 string = input("인사말을 입력하세요>")
@@ -221,7 +245,7 @@ print("output_a 타입", type(output_a))
 print("output_b 타입", type(output_b))
 
 ## int인데 점을 붙이면?? Value Error
-# output_a = int("52.1")
+output_a = int("52.1")
 
 ## 숫자를 문자열로
 output_a = str(52)
@@ -254,17 +278,26 @@ b = c
 ## 아침입니다 안녕하세요
 print(a, b)
 
+
+
+
+
+
 ## 숫자와 문자열의 다양한 기능
 
 ## 문자열의 format() 함수
 ## 앞에 있는 중괄호 {}를 format함수의 매개변수로 교체 해주는 함수
 ## 중괄호와 매개변수의 갯수가 같거나 매개변수가 많아야함 중괄호가 많으면 에러.
 
+name = input("이름은? ")
+print(name,"님 안녕하세요. 환영합니다.")
+
 string_a = "{}".format(10)
 print(string_a)
 string_a = "텍스트입니다. {} {}".format(10, 20)
 print(string_a)
 string_a = "텍스트 이지롱  {} {} {}".format(10, 20, 100)
+string_a = "텍스트 이지롱 {{}} {} {}".format(10, 20, 100)
 print(string_a)
 string_b = "{}".format(10)
 print(string_b)
@@ -273,7 +306,7 @@ print(type(string_b))
 ## format 매개변수에 변수값을 집어넣어서 사용
 a = "월급"
 b = 500
-string_a = "나는 {}을 {}만원 받고 싶습니다.".format(a, b)
+string_a = "나는 세후 {}을 {}만원 받고 싶습니다.".format(a, b)
 print(string_a)
 
 ## But 3.6 버젼부터는 f-string라는 기능을 사용합니다. 전 이게 편해서 요 기능으로 씁니다~
@@ -285,6 +318,7 @@ print(string_a)
 ##format02.py
 # 정수
 output_a="{:d}".format(52)
+
 
 # 특정 칸에 출력하기
 output_b="{:5d}".format(52)     # 5칸
@@ -359,6 +393,7 @@ output_a = 52.0
 output_b = "{:g}".format(output_a)
 print(output_a)
 print(output_b)
+print(type(output_b))
 
 ## upper() lower() 대문자 소문자로 만드는 함수
 a = "Hello World Python Programming!!"
@@ -390,22 +425,34 @@ print("대문자만 있는지 ",a.isupper())      ## 대문자만인지
 
 ## 왼쪽부터 처음 등장하는 위치 find()
 ## 오른쪽부터 처음 등장하는 위치 rfind()
-a = "안녕안녕하세요".find("안녕")
+a = "안녕안녕하세요".("안녕")
 print(a)
 
-a = "안녕안녕하세요".rfind("안녕")
+a = "안녕안녕안녕하세요".rfind("안녕")
 print(a)
+
+a = "52.2".rfind(".")
 
 ## 문자열과 in 연산자
-print("안녕" in "안녕하세요")
+print("안뇽" in "안녕하세요")
 print("잘자" in "안녕하세요")
 
 ## 문자열 자르기 split() (리스트) 
-a = "10 20 30 40 50".split(" ")
+a = "10 20 30 40 50"
 print(a)
+a = "10 20 30 40 50".split("0")
+print(a)
+print(type(a))
 print(a[0])
+print(a[1])
+print(a[2])
 
 print("{}".format(52,273))
+
+
+
+
+
 
 
 
@@ -503,6 +550,7 @@ else:
 
 
 
+
 ## 불 값은 True, False외에 다른값도 넣을 수 있으며, False로 변환되는 값 0, 0.0, 빈값, 그 외에는 True로 변환
 
 ## Pass = 아무것도 안하고 넘김, 나중에 짤때 씀
@@ -528,4 +576,4 @@ else:
 
 x = 11
 if 10 < x < 20:
-    print("조간이 맞습니다.")
+    print("조건이 맞습니다.")
