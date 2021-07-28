@@ -8,6 +8,8 @@ example_dictionary = {
 # 딕셔너리의 items() 함수 결과 출력하기
 print("# 딕셔너리의 items() 함수")
 print("items():", example_dictionary.items())
+print("type : ", type(example_dictionary.items()))
+## 괄호는 튜플, 값을 변할 수 없는 것.
 print()
 
 # for 반복문과 items() 함수 조합해서 사용하기

@@ -79,4 +79,40 @@ for key in character:
             print(key + " :", i)
     else:
         pass
-        print(key + " :", character[key])    
+        print(key + " :", character[key])
+
+# 4-3 2
+key_list = ["name","hp","mp","level"]
+value_list = ["기사",200,30,5]
+character = {}
+for i in range(len(key_list)):
+    character[key_list[i]] = value_list[i]
+print(character)
+
+# 4-3 3
+limit = 10000
+i = 1
+sum_value = 0
+while sum_value < limit:    
+    sum_value += i    
+    i += 1
+print(f"{i-1}를 더할 때 {limit}을 넘으며 그때의 값은 {sum_value}입니다.")
+
+# 4-3 4
+max_value = 0
+a = 0
+b = 0
+for i in range(1, 100):    
+    j = 100 - i
+    if max_value < j * i:        
+        a = i
+        b = j
+        max_value = j * i
+
+print("최대가 되는 경우: {} * {} = {}".format(a,b,max_value))
+
+# 4-4 2
+output = [ i for i in range(1,100+1) if "{:b}".format(i).count("0") == 1 ]
+for i in output:
+    print("{} : {}".format(i, "{:b}".format(i)))
+print("합계:", sum(output))

@@ -1,15 +1,17 @@
 def printc(text):
     print("\033[33m" + text + "\033[0m")
 
+printc("4-1 리스트와 반복문")
+
 # 3주차 파이썬
 
 # 0-1 quit 풀이시간
 # 0-2 실수와 정수를 구분하는 이유
-# print(0.1 + 0.1 + 0.1 == 0.3)
-# print(0.1 + 0.1 + 0.1)
-# print(0.3)
-# print(0.1)
-# print('%0.400f' % 0.1)
+print(0.1 + 0.1 + 0.1 == 0.3) # True
+print(0.1 + 0.1 + 0.1)
+print(0.3)
+print(0.1)
+print('%0.400f' % 0.1)
 # print("")
 # print("")
 # print("")
@@ -244,12 +246,3 @@ print("for element in 안녕하세요:")
 print("    print(element)")
 for element in "안녕하세요":
     print(element)
-
-
-printc("# 문제풀이 3번 4번문제")
-
-
-
-
-
-

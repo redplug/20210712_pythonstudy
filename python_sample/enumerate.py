@@ -9,6 +9,7 @@ print()
 # enumerate() 함수를 적용해 출력합니다.
 print("# enumberate() 함수 적용 출력")
 print(enumerate(example_list))
+print(type(enumerate(example_list)))
 print()
 
 # list() 함수로 강제 변환해 출력합니다.
@@ -20,3 +21,4 @@ print()
 print("# 반복문과 조합하기")
 for i, value in enumerate(example_list):
     print("{}번째 요소는 {}입니다.".format(i, value))
+

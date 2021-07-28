@@ -8,7 +8,7 @@ dictionary = {
 
 # 존재하지 않는 키에 접근해 봅니다.
 value = dictionary.get("존재하지 않는 키")
-
+print(value)
 # 없는 값이 경우 keyError을 발생시킴
 # value = dictionary["존재하지 않는 키"]
 
