@@ -11,7 +11,7 @@ if top_of_range.isdigit():
 else:
     print('숫자를 입력하지 않아 종료합니다.')
     quit()
-## 랜덤 숫자를 입력합니다.
+# 랜덤 숫자를 입력합니다.
 random_number = random.randint(0, top_of_range)
 guesses = 0
 print(f"정답은 0부터 {top_of_range} 까지의 숫자중 하나입니다.")
