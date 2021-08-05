@@ -1,4 +1,4 @@
-import random
+import random # random 모듈안에 있는 함수들을 쓸수 있게 불러와줘
 
 print("정해진 범위 내에서 숫자를 맞추는 게임입니다.")
 top_of_range = input("0보다 큰 숫자를 입력해주세요(범위설정) :  ")

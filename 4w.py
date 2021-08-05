@@ -1,8 +1,9 @@
+
 #-*- coding: utf-8 -*-
 # 숫자 맞추기 퀴즈 풀이
 
-# 챕터 05 - 함수
-# 05-1 함수 만들기
+### 챕터 05 - 함수 ###
+## 05-1 함수 만들기 ##
 # 함수? 입력으로 어떤값(매개변수)를 넣으면 내부에서 처리하고 최종 결과값(리턴)을 출력하는 해주는 친구.
 # 실제 사용(호출)할 때는 함수내부는 어떤구조로 되어있는지는 알 필요가 없음 -> 입력 값을 넣으면 '내가 원하는 값(리턴)'을 준다만 알면됨.
 
@@ -40,20 +41,21 @@ def 함수이름(매개변수1, 매개변수2, 매개변수3):
 # def 함수명(*매개변수명)
 # print("당신은", "우리와", "함께할 수", "없습니다.")
 
+
 # - 기본 매개변수 : 함수 호출 시 매개변수를 안넣었을 때 기본으로 들어가는 값 말그대로 '기본 값', 사용법 : 매개변수명=기본값
 # def 함수명(매개변수명=값)
 
 # - 키워드 매개변수 : 사용(호출)시에 매개변수명을 직접 입력하여 사용하는 케이스
-# def 함수명(aaa, bbb, ccc)
-#   함수내부 블라블라~
-# 함수명(aaa=1,2,3) // 함수 호출 시 매개변수명을 입력
+def 함수명(aaa, bbb, ccc):
+  함수내부 블라블라~
+# 함수명(bbb=2,aaa=1,ccc=3) // 함수 호출 시 매개변수명을 입력
 
 # 리턴 설명
 # 위에서 얘기한 함수 -> 입력으로 어떤값(매개변수)를 넣으면 내부 적으로 처리하고 최종 결과값(리턴)을 출력하는것
 # 결과값을 출력 = 리턴(return) => 리턴을 만난다 = 함수를 종료한다
 
 def 리턴함수(매개변수):
-    매개변수 += 1    
+    매개변수 = 매개변수 + 1    
     return 매개변수
 
 입력값 = 1
@@ -76,20 +78,22 @@ print(mul(5,7,9,10))
 
 
 
-# 05-2 함수의 활용
+## 05-2 함수의 활용 ##
+
 # 재귀함수 : 자기 자신을 호출하는 함수(파이썬에서는 1000번까지 호출 가능), 상황에 따라 기하급수적으로 많이 반복한다는 문제가 있음
 # 재귀 씀 -> 반복이 늘어남 -> 코드가 작동시간이 기하급수로 늘어남 -> 야근을 하게됨 -> 매우 기분 나빠짐. -> 자주쓰면 분노 함.
 # 메모화 : 재귀함수를 해결하는 방법, 재귀함수로 호출했던 값을 딕셔너리에 저장해서 또 호출하지 않게함. -> 기억하고 있다가 재귀함수 쓸일이 있을 때 사용.
 
 #### 재귀함수 뎁스 체크(시작) ####
 # 1000줄에서 멈춤
-# def factorial_test(count):
-#     if count == 0:
-#         return
-#     print("몇번째 재귀?", count)
-#     count += 1
-#     factorial_test(count)
-# factorial_test(5)
+aaa = 1
+def factorial_test(count):
+    if count == 0:
+        return
+    print("몇번째 재귀?", count)    
+    count += 1
+    factorial_test(count)
+factorial_test(5)
 #### 재귀함수 뎁스 체크(끝) ####
 
 # global 설명
@@ -109,7 +113,7 @@ def flatten(data):
     output = []    
     for data_list in data:
         if type(data_list) == list:
-            output += flatten(data_list)       
+            output += flatten(data_list) # 리스트 끼리 더하면 하나의 리스트가 됨
         else:            
             output.append(data_list)
     return output
@@ -146,11 +150,10 @@ def 문제(남은사람수, 앉힌사람수):
     return count
 
 print(문제(전체사람의수, 앉힐수있는최소사람수))
+   
 
-    
 
-
-# 05-3 함수 고급
+## 05-3 함수 고급 ##
 
 # 튜플?
 # 리스트와 비슷, 한번 결정된 요소는 바꿀 수 없다
@@ -179,15 +182,15 @@ print((lambda x: x * x)(3))
 
 # 파일 열기 및 닫기 
 # 사용법 : 
-# 파일객체 = open("파일경로", "읽기 모드")
+# 파일객체 = open("파일경로", "모드")
 # 파일객체.close
 
-# 쓰기모드
+# 쓰기모드 'w'
 file = open("textfile.txt","w")
 file.write("Hello Python Programing...!")
 file.close()
 
-# 읽기모드
+# 읽기모드 'r'
 file = open("textfile.txt","r")
 contents = file.read()
 file.close()
@@ -195,25 +198,30 @@ print(contents)
 
 # 파일을 open하면 꼭 close를 해줄 것. -> with 키워드
 
-# with 키워드 : 파일을 닫을 때 사용하는 키워드
+# with 키워드 : 파일을 닫을 때 사용하는 키워드, with 내 구문이 끝나면 자동으로 파일이 닫힘.
 # 사용법 : 
 with open("textfile.txt", "w") as file:
     file.write("Hello Python Program!!")
+print(aaaa)
+
 ## with구문이 끝나면 열었던 파일이 닫힘.
 
 
 # 파일을 읽을 때 한줄씩 읽어드리는 방법은 for 반복문을 사용한다
 
+# 파일을 기록
 with open("textfile.txt", "w") as file:
     file.write("Hello Python Program 11\n")
     file.write("Hello Python Program 22")
 
-
+# 파일을 읽고 한줄씩 읽어드린다.
 file = open("textfile.txt","r")
-for line in file:
-    print(line)
+for line in file:    
+    print(a)
 file.close()
 
+a= "야이노무아야아야앙"
+print(a[0])
 
 # 제네레이터?
 # 파이썬의 특수한 문법구조로 이터레이터를 직접 만들때 사용하는 코드
@@ -225,7 +233,7 @@ file.close()
 
 def number_generator():
     x = 1
-    yield x    # 0을 함수 바깥으로 전달하면서 코드 실행을 함수 바깥에 양보
+    yield x   # 0을 함수 바깥으로 전달하면서 코드 실행을 함수 바깥에 양보
     x += 1
     yield x   # 1을 함수 바깥으로 전달하면서 코드 실행을 함수 바깥에 양보
     y = 1    

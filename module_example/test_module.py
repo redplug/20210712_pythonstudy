@@ -1,4 +1,3 @@
-# test_module.py 파일
 PI = 3.141592
 
 def number_input():
@@ -10,3 +9,8 @@ def get_circumference(radius):
 
 def get_circle_area(radius):
     return PI * radius * radius
+
+# 활용 예
+if __name__ == "__main__":
+    print("get_circumference(10):", get_circumference(10))
+    print("get_circle_area(10): ", get_circle_area(10))

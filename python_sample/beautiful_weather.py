@@ -7,6 +7,7 @@ target = request.urlopen("http://www.kma.go.kr/weather/forecast/mid-term-rss3.js
 
 # BeautifulSoup을 사용해 웹 페이지를 분석합니다.
 soup = BeautifulSoup(target, "html.parser")
+# print(soup)
 
 # location 태그를 찾습니다.
 for location in soup.select("location"):
@@ -16,3 +17,25 @@ for location in soup.select("location"):
     print("최저기온:", location.select_one("tmn").string)
     print("최고기온:", location.select_one("tmx").string)
     print()
+
+
+# 추가 내용
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://kin.naver.com/search/list.nhn?query=%ED%8C%8C%EC%9D%B4%EC%8D%AC'
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    html = response.text
+    soup = BeautifulSoup(html, 'html.parser')
+    title = soup.select_one('#s_content > div.section > ul > li:nth-child(1) > dl > dt > a')
+
+    # print(soup)
+
+else : 
+    print(response.status_code)
+
+print(title)
+print(title.get_text())

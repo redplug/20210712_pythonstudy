@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 app = Flask(__name__)
 @app.route("/")
 
-def hello():
+def hello2():
     # urlopen() 함수로 기상청의 전국 날씨를 읽습니다.
     target = request.urlopen("http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108")
 

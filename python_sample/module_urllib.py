@@ -6,4 +6,5 @@ target = request.urlopen("https://google.com")
 output = target.read()
 
 # 출력합니다.
-print(output)
+print("target : ",target)
+# print(output)
