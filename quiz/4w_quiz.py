@@ -90,10 +90,11 @@ def mainmenu(number=1):
     print("1) 퀴즈게임\n")
     print("2) 숫자맞추기 게임\n")
     print("3) 게임을 종료\n")
-    print("미입력시 퀴즈게임이 선택됩니다.\n")
+    print("미입력시 퀴즈게임이 선택됩니다.\n")    
     number_check = 0
     while number_check not in ['','1','2','3']:
         number_check = input("원하는 게임을 골라보게나) ")
+        print("숫자 안넣으면", number_check)
     if number_check == '':
         number_check = int(number)
     number_check = int(number_check)
