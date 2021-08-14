@@ -16,6 +16,7 @@ def hello2():
     # location 태그를 찾습니다.
     output = ""
     for location in soup.select("location"):
+        print(location)
         # 내부의 city, wf, tmn, tmx 태그를 찾아 출력합니다.
         output += "<h3>{}</h3>".format(location.select_one("city").string)
         output += "날씨: {}<br/>".format(location.select_one("wf").string)
